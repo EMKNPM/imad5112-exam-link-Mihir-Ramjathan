@@ -1,6 +1,7 @@
 package com.example.campsitecommander
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -49,6 +50,12 @@ class HomeActivity : AppCompatActivity() {
         // saves data for the item
         btnAddItem.setOnClickListener {
             addItem()
+        }
+
+
+        btnDetail.setOnClickListener {
+            val intent = Intent(this, DetailActivity::class.java)
+            startActivity(intent)
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
