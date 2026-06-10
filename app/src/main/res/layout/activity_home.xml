@@ -6,17 +6,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <ImageView
-        android:id="@+id/ivLogo"
-        android:layout_width="223dp"
-        android:layout_height="166dp"
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E6C367"
+        android:minHeight="48dp"
+        android:textColor="#E6C367"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.001"
-        app:srcCompat="@drawable/campsitelogo" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btnAddItem"
@@ -45,6 +47,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.426" />
 
+
     <Button
         android:id="@+id/btnDetail"
         android:layout_width="wrap_content"
@@ -57,11 +60,10 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.267" />
-
+        app:layout_constraintVertical_bias="0.297" />
 
     <TextView
-        android:id="@+id/tvAvg"
+        android:id="@+id/tvTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Total Items Packed"
