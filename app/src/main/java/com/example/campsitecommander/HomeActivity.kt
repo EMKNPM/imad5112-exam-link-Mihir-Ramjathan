@@ -25,7 +25,7 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var btnDetail: Button
     private lateinit var tvTotal: TextView
     private lateinit var spinner: Spinner
-    
+
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
