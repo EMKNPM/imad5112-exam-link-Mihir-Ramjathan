@@ -7,7 +7,6 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Spinner
 import android.widget.TextView
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -28,7 +27,6 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var spinner: Spinner
 
 
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -49,13 +47,24 @@ class HomeActivity : AppCompatActivity() {
 
         // saves data for the item
         btnAddItem.setOnClickListener {
-            addItem()
+            Items(
+                itemName  = edtName.text.toString(),
+                category = edtCategory.text.toString(),
+                quantity =edtQuantity,
+                comments = edtComment.text.toString()
+            )
         }
-
 
         btnDetail.setOnClickListener {
             val intent = Intent(this, DetailActivity::class.java)
             startActivity(intent)
+        }
+
+
+        // saves data for the item
+        btnTotal.setOnClickListener {
+
+
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -64,8 +73,6 @@ class HomeActivity : AppCompatActivity() {
             insets
         }
     }
-
-    private fun addItem() {
-    }
 }
+
 
